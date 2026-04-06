@@ -31,8 +31,8 @@
           For my capstone project with ARTMS, I worked on a system to track radiopharmaceutical capsules inside shielded pneumatic hoses. The goal was simple: give operators clear position feedback without opening the system or interrupting production.
         </p>
         <figure class="hero-figure">
-          <span class="figure-title">Figure 1. Final Design Model</span>
           <img src="finaldeisng.png" alt="Final 3D model of the QIS capsule tracking system with all major components.">
+          <figcaption>Figure 1. Final design model of the QIS capsule tracking system.</figcaption>
         </figure>
         <div class="hero-group">
           <span class="hero-group-label">Project Details</span>
@@ -118,7 +118,6 @@
           </p>
           <div class="embedded-video-stack">
             <figure class="viz">
-              <span class="figure-title">Figure 2. ARTMS System Video</span>
               <div class="video-shell">
                 <video class="video-frame" controls preload="metadata">
                   <source src="https://artms.ca/wp-content/themes/artms-2021/videos/expand_your_reach_telix.mp4" type="video/mp4">
@@ -126,17 +125,16 @@
                 </video>
               </div>
               <figcaption>
-                ARTMS overview video showing the broader transfer and production system context.
+                Figure 2. ARTMS system video showing the broader transfer and production system context.
               </figcaption>
             </figure>
           </div>
         </article>
 
         <figure class="viz">
-          <span class="figure-title">Transfer System Overview</span>
           <img src="transferiamge.png" alt="ARTMS transfer hose system showing the send and receive station, transfer hose, and target capsule.">
           <figcaption>
-            Figure 1. Transfer system overview showing the send and receive station, transfer hose, and target capsule location.
+            Figure 3. Transfer system overview showing the send and receive station, transfer hose, and target capsule location.
           </figcaption>
         </figure>
       </div>
@@ -190,7 +188,6 @@
     <section class="section" id="solution">
       <div class="grid-2">
         <figure class="viz">
-          <span class="figure-title">Concept Comparison</span>
           <div class="comparison-chart">
             <div class="bar-row">
               <strong>Wheel bot</strong>
@@ -224,7 +221,7 @@
             </div>
           </div>
           <figcaption>
-            Figure 2. Weighted decision matrix results from the design report. Sensing concepts consistently outperformed robotic concepts, which pushed the project toward a modular sensor architecture.
+            Figure 4. Concept comparison using a weighted decision matrix from the design report. Sensing concepts consistently outperformed robotic concepts, which pushed the project toward a modular sensor architecture.
           </figcaption>
         </figure>
 
@@ -248,10 +245,9 @@
 
       <div class="media-grid">
         <figure class="viz">
-          <span class="figure-title">Test Bench Image</span>
           <img src="DSC00459.JPG" alt="Bench-scale test setup for the QIS capsule tracking system.">
           <figcaption>
-            Figure 3. Bench-scale test setup used to evaluate the sensing system during prototype validation.
+            Figure 5. Bench-scale test setup used to evaluate the sensing system during prototype validation.
           </figcaption>
         </figure>
 
@@ -277,30 +273,27 @@
           This group shows the physical test environment used to validate the prototype. The goal was to create a repeatable setup that connected the hose, air supply, sensor mounts, and supporting hardware into one usable bench system.
         </p>
         <p>
-          Figures 5 to 7 show the test interface, the 3D-printed connection hardware, and the coupling used in the final product. The coupling connects two hoses together and also provides a mounting point for the sensor PCB.
+          Figures 6 to 8 show the test interface, the 3D-printed connection hardware, and the coupling used in the final product. The coupling connects two hoses together and also provides a mounting point for the sensor PCB.
         </p>
       </article>
 
       <div class="grid-3 build-gallery">
         <figure class="viz">
-          <span class="figure-title">Test Setup Interface</span>
           <img src="testsetup.png" alt="Test bench setup interface for the QIS capsule tracking prototype.">
           <figcaption>
-            Figure 5. Test setup interface used to organize and run the prototype bench system.
+            Figure 6. Test setup interface used to organize and run the prototype bench system.
           </figcaption>
         </figure>
         <figure class="viz">
-          <span class="figure-title">3D-Printed Interface</span>
           <img src="Picture3.png" alt="3D-printed interface connecting the hose to the air compressor.">
           <figcaption>
-            Figure 6. 3D-printed interface connecting the hose to the air compressor during testing.
+            Figure 7. 3D-printed interface connecting the hose to the air compressor during testing.
           </figcaption>
         </figure>
         <figure class="viz">
-          <span class="figure-title">Coupling</span>
           <img src="coupling.png" alt="Coupling component used in the QIS capsule tracking system test setup.">
           <figcaption>
-            Figure 7. Coupling used to connect the hose into the pneumatic test setup.
+            Figure 8. Coupling used to connect the hose into the pneumatic test setup.
           </figcaption>
         </figure>
       </div>
@@ -312,23 +305,21 @@
           This group shows the core electronics used in the prototype. The sensing system relied on a hose-mounted board to detect capsule motion and an interface board to gather signals from the distributed nodes.
         </p>
         <p>
-          Figures 8 and 9 show the custom sensor PCB and the interface PCB that collected data and passed it forward to the HMI. In the final design, PCB placement also helped shield the electronics and keep the hose path sealed.
+          Figures 9 and 10 show the custom sensor PCB and the interface PCB that collected data and passed it forward to the HMI. In the final design, PCB placement also helped shield the electronics and keep the hose path sealed.
         </p>
       </article>
 
       <div class="grid-2 build-gallery">
         <figure class="viz">
-          <span class="figure-title">Sensor PCB</span>
           <img src="DSC00461.JPG" alt="Custom sensor PCB designed to be mounted on the hose.">
           <figcaption>
-            Figure 8. Custom sensor PCB designed to mount directly on the hose for capsule detection.
+            Figure 9. Custom sensor PCB designed to mount directly on the hose for capsule detection.
           </figcaption>
         </figure>
         <figure class="viz">
-          <span class="figure-title">Interface PCB</span>
           <img src="interfacepcb.jpg" alt="Interface PCB that collects data from the sensor PCBs and sends it to the HMI.">
           <figcaption>
-            Figure 9. Interface PCB used to collect sensor data and send it to the HMI.
+            Figure 10. Interface PCB used to collect sensor data and send it to the HMI.
           </figcaption>
         </figure>
       </div>
@@ -340,23 +331,21 @@
           This group shows how the system output was presented to the operator. The HMI was designed both for demonstration and for a more integration-focused workflow.
         </p>
         <p>
-          Figures 10 and 11 show two interface directions: one used for demonstration and one intended for PLC-oriented integration so the system could connect more directly with plant controls.
+          Figures 11 and 12 show two interface directions: one used for demonstration and one intended for PLC-oriented integration so the system could connect more directly with plant controls.
         </p>
       </article>
 
       <div class="grid-2 build-gallery">
         <figure class="viz">
-          <span class="figure-title">HMI for PLC Integration</span>
           <img src="hmi2.PNG" alt="HMI screen prepared for PLC integration.">
           <figcaption>
-            Figure 10. HMI concept prepared for PLC-oriented integration.
+            Figure 11. HMI concept prepared for PLC-oriented integration.
           </figcaption>
         </figure>
         <figure class="viz">
-          <span class="figure-title">HMI Demo</span>
           <img src="hmi1.PNG" alt="HMI screen used for demonstration of the capsule tracking system.">
           <figcaption>
-            Figure 11. Demonstration HMI used to show live system behavior.
+            Figure 12. Demonstration HMI used to show live system behavior.
           </figcaption>
         </figure>
       </div>
@@ -368,7 +357,6 @@
           This video is included as a final summary artifact for the project. It is separate from the build groups above and gives a concise overview of the system concept, prototype, and final direction.
         </p>
         <figure class="viz">
-          <span class="figure-title">Figure 12. Capstone Video</span>
           <div class="video-shell">
             <iframe
               class="video-frame"
@@ -380,7 +368,7 @@
             ></iframe>
           </div>
           <figcaption>
-            Capstone video showing the project direction, sensing concept, and final system summary.
+            Figure 13. Capstone video showing the project direction, sensing concept, and final system summary.
           </figcaption>
         </figure>
       </article>
@@ -436,7 +424,7 @@
       <article class="panel build-group-copy">
           <h3>Sensor data plot</h3>
           <p>
-            Figure 13 shows accelerometer and time-of-flight data collected during testing. The spikes align with capsule motion and indicate when the system sensed the capsule passing through the setup.
+            Figure 14 shows accelerometer and time-of-flight data collected during testing. The spikes align with capsule motion and indicate when the system sensed the capsule passing through the setup.
           </p>
           <div class="callout">
             The key result was feasibility: the prototype produced detectable sensor responses and usable live feedback in controlled testing.
@@ -444,10 +432,9 @@
       </article>
 
       <figure class="viz testing-plot">
-          <span class="figure-title">Sensor Data Plot</span>
           <img src="newplot-2.png" alt="Accelerometer and time-of-flight sensor data where spikes indicate sensing of the capsule.">
           <figcaption>
-            Figure 13. Accelerometer and time-of-flight sensor data showing spikes when the capsule is sensed.
+            Figure 14. Sensor data plot showing accelerometer and time-of-flight spikes when the capsule is sensed.
           </figcaption>
       </figure>
 

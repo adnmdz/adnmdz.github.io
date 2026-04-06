@@ -634,7 +634,6 @@ p {
   background: linear-gradient(90deg, #0f7c81, #e2a339);
 }
 
-.figure-title,
 .eyebrow {
   display: inline-block;
   color: var(--muted);
@@ -675,7 +674,8 @@ p {
   border-color: rgba(15, 124, 129, 0.22);
 }
 
-.viz figcaption {
+.viz figcaption,
+.hero-figure figcaption {
   margin-top: 1rem;
   color: var(--muted);
   font-size: 0.96rem;
