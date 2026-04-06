@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aidan Mendoza | Project Entry</title>
+  <meta name="description" content="Capstone project entry for the ARTMS QIS Capsule Tracking System.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">Aidan Mendoza</span>
+        <span class="brand-note">Electrical Engineering ePortfolio</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">About Me</a>
+        <a href="project.html" aria-current="page">Project Entry</a>
+        <a href="reflection.html">Reflection</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero project-hero-full" id="top">
+      <article class="hero-panel">
+        <span class="kicker">Project Entry</span>
+        <h1>QIS Capsule Tracking System</h1>
+        <p class="lead">
+          For my capstone project with ARTMS, I worked on a system to track radiopharmaceutical capsules inside shielded pneumatic hoses. The goal was simple: give operators clear position feedback without opening the system or interrupting production.
+        </p>
+        <figure class="hero-figure">
+          <span class="figure-title">Figure 1. Final Design Model</span>
+          <img src="finaldeisng.png" alt="Final 3D model of the QIS capsule tracking system with all major components.">
+        </figure>
+        <div class="hero-group">
+          <span class="hero-group-label">Project Details</span>
+        <div class="tag-list">
+          <span class="tag teal">Sponsor: ARTMS</span>
+          <span class="tag copper">Course: ENGR 499</span>
+          <span class="tag signal">Domain: Radiopharmaceutical manufacturing</span>
+        </div>
+        </div>
+        <div class="hero-group">
+          <span class="hero-group-label">Links</span>
+        <div class="hero-actions">
+          <a class="button" href="Final Design Report I32.pdf">Open Final Design Report</a>
+          <a class="ghost-button" href="reflection.html">Read Reflection</a>
+        </div>
+        </div>
+        <nav class="project-subnav" aria-label="Project sections">
+          <span class="hero-group-label">Jump To</span>
+        <div class="project-anchors">
+          <a href="#problem">Problem</a>
+          <a href="#process">Process</a>
+          <a href="#solution">Solution</a>
+          <a href="#testing">Testing</a>
+          <a href="#next">Next Steps</a>
+        </div>
+        </nav>
+      </article>
+    </section>
+
+    <section class="section" id="problem">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Overview</span>
+          <h2>Project overview</h2>
+        </div>
+      </div>
+
+      <div class="project-vitals">
+        <article class="stat-card">
+          <strong>What</strong>
+          <span>Track capsule position inside shielded transfer hoses.</span>
+        </article>
+        <article class="stat-card">
+          <strong>Why</strong>
+          <span>Reduce downtime and operator exposure.</span>
+        </article>
+        <article class="stat-card">
+          <strong>How</strong>
+          <span>Compare concepts, prototype sensors, and test them.</span>
+        </article>
+        <article class="stat-card">
+          <strong>Outcome</strong>
+          <span>Live feedback was demonstrated in controlled testing.</span>
+        </article>
+      </div>
+
+      <article class="panel topline-teal overview-block">
+        <h3>Problem</h3>
+        <p>
+          ARTMS moves radioactive capsules through sealed hoses during isotope production. If a capsule jams, operators cannot directly see where it is.
+        </p>
+        <p>
+          Our solution was an external sensing system that gives live capsule position feedback without opening the process or disturbing the sealed hose.
+        </p>
+      </article>
+
+      <article class="panel topline-copper overview-block">
+        <h3>Constraints</h3>
+        <p>
+          The design had to meet ISO 7 cleanliness, ALARA safety, tight space, sealed transport, and existing workflow constraints.
+        </p>
+        <p>
+          We chose externally mounted, non-invasive sensing because it preserved the filtered hose, reduced contamination risk, and was easier to integrate into the client workflow.
+        </p>
+      </article>
+
+      <div class="media-grid project-overview-media">
+        <article class="panel">
+          <span class="eyebrow">Context</span>
+          <h3>Reference video</h3>
+          <p>
+            The ARTMS video gives broader system context for the transfer system.
+          </p>
+          <div class="embedded-video-stack">
+            <figure class="viz">
+              <span class="figure-title">Figure 2. ARTMS System Video</span>
+              <div class="video-shell">
+                <video class="video-frame" controls preload="metadata">
+                  <source src="https://artms.ca/wp-content/themes/artms-2021/videos/expand_your_reach_telix.mp4" type="video/mp4">
+                  Your browser does not support embedded video.
+                </video>
+              </div>
+              <figcaption>
+                ARTMS overview video showing the broader transfer and production system context.
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <figure class="viz">
+          <span class="figure-title">Transfer System Overview</span>
+          <img src="transferiamge.png" alt="ARTMS transfer hose system showing the send and receive station, transfer hose, and target capsule.">
+          <figcaption>
+            Figure 1. Transfer system overview showing the send and receive station, transfer hose, and target capsule location.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Design Story</span>
+          <h2>How the solution evolved</h2>
+        </div>
+        <p class="section-copy">
+          The design moved from broad concepts to a testable sensing system.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-card" data-step="1">
+          <h3>Define the problem</h3>
+          <p>
+            We defined the failure case: jammed capsules were hard to locate and current recovery methods were disruptive.
+          </p>
+        </article>
+        <article class="timeline-card" data-step="2">
+          <h3>Map the constraints</h3>
+          <p>
+            Any solution had to preserve the sealed hose, fit tight geometry, and avoid adding new safety or maintenance risks.
+          </p>
+        </article>
+        <article class="timeline-card" data-step="3">
+          <h3>Generate competing concepts</h3>
+          <p>
+            We compared robotic approaches with sensing options before committing.
+          </p>
+        </article>
+        <article class="timeline-card" data-step="4">
+          <h3>Use a weighted decision process</h3>
+          <p>
+            Sensor concepts scored best because they were simpler, safer, and easier to integrate.
+          </p>
+        </article>
+        <article class="timeline-card" data-step="5">
+          <h3>Prototype and validate</h3>
+          <p>
+            We built a bench test rig, captured sensor data, and confirmed that live feedback was feasible.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="solution">
+      <div class="grid-2">
+        <figure class="viz">
+          <span class="figure-title">Concept Comparison</span>
+          <div class="comparison-chart">
+            <div class="bar-row">
+              <strong>Wheel bot</strong>
+              <div class="bar-track"><div class="bar-fill" style="width: 80.8%;"></div></div>
+              <span>553</span>
+            </div>
+            <div class="bar-row">
+              <strong>Screw bot</strong>
+              <div class="bar-track"><div class="bar-fill" style="width: 79.1%;"></div></div>
+              <span>541</span>
+            </div>
+            <div class="bar-row">
+              <strong>Inductive</strong>
+              <div class="bar-track"><div class="bar-fill" style="width: 97.8%;"></div></div>
+              <span>669</span>
+            </div>
+            <div class="bar-row">
+              <strong>Time of flight</strong>
+              <div class="bar-track"><div class="bar-fill" style="width: 95.6%;"></div></div>
+              <span>654</span>
+            </div>
+            <div class="bar-row highlight">
+              <strong>Accelerometer</strong>
+              <div class="bar-track"><div class="bar-fill" style="width: 100%;"></div></div>
+              <span>684</span>
+            </div>
+            <div class="bar-row">
+              <strong>Hall effect</strong>
+              <div class="bar-track"><div class="bar-fill" style="width: 91.2%;"></div></div>
+              <span>624</span>
+            </div>
+          </div>
+          <figcaption>
+            Figure 2. Weighted decision matrix results from the design report. Sensing concepts consistently outperformed robotic concepts, which pushed the project toward a modular sensor architecture.
+          </figcaption>
+        </figure>
+
+        <article class="panel">
+          <span class="eyebrow">Key Decision</span>
+          <h3>The final design used multiple sensing modes.</h3>
+          <p>
+            Accelerometer sensing scored highest, but the final system used redundancy. Inductive, accelerometer, and time-of-flight sensing covered different weaknesses and reduced the risk of misleading readings.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Final System</span>
+          <h2>What we built</h2>
+        </div>
+      </div>
+
+      <div class="media-grid">
+        <figure class="viz">
+          <span class="figure-title">Test Bench Image</span>
+          <img src="DSC00459.JPG" alt="Bench-scale test setup for the QIS capsule tracking system.">
+          <figcaption>
+            Figure 3. Bench-scale test setup used to evaluate the sensing system during prototype validation.
+          </figcaption>
+        </figure>
+
+        <article class="panel">
+          <h3>System build</h3>
+          <p>
+            We built a bench-scale prototype that combined mechanical coupling, sensing hardware, an interface PCB, and an HMI to validate live capsule tracking.
+          </p>
+          <ul class="bullet-list">
+            <li>Distributed sensing nodes mounted along the hose.</li>
+            <li>A central interface PCB to collect sensor data.</li>
+            <li>An HMI and PLC-facing interface for live feedback.</li>
+            <li>A test bench for repeatable prototype validation.</li>
+            <li>My work focused on the embedded and experimental side, especially firmware, sensing, and test validation.</li>
+          </ul>
+        </article>
+      </div>
+
+      <article class="panel build-group-copy">
+        <span class="eyebrow">Component Group 1</span>
+        <h3>Test setup and mechanical interface</h3>
+        <p>
+          This group shows the physical test environment used to validate the prototype. The goal was to create a repeatable setup that connected the hose, air supply, sensor mounts, and supporting hardware into one usable bench system.
+        </p>
+        <p>
+          Figures 5 to 7 show the test interface, the 3D-printed connection hardware, and the coupling used in the final product. The coupling connects two hoses together and also provides a mounting point for the sensor PCB.
+        </p>
+      </article>
+
+      <div class="grid-3 build-gallery">
+        <figure class="viz">
+          <span class="figure-title">Test Setup Interface</span>
+          <img src="testsetup.png" alt="Test bench setup interface for the QIS capsule tracking prototype.">
+          <figcaption>
+            Figure 5. Test setup interface used to organize and run the prototype bench system.
+          </figcaption>
+        </figure>
+        <figure class="viz">
+          <span class="figure-title">3D-Printed Interface</span>
+          <img src="Picture3.png" alt="3D-printed interface connecting the hose to the air compressor.">
+          <figcaption>
+            Figure 6. 3D-printed interface connecting the hose to the air compressor during testing.
+          </figcaption>
+        </figure>
+        <figure class="viz">
+          <span class="figure-title">Coupling</span>
+          <img src="coupling.png" alt="Coupling component used in the QIS capsule tracking system test setup.">
+          <figcaption>
+            Figure 7. Coupling used to connect the hose into the pneumatic test setup.
+          </figcaption>
+        </figure>
+      </div>
+
+      <article class="panel build-group-copy">
+        <span class="eyebrow">Component Group 2</span>
+        <h3>PCBs and sensing hardware</h3>
+        <p>
+          This group shows the core electronics used in the prototype. The sensing system relied on a hose-mounted board to detect capsule motion and an interface board to gather signals from the distributed nodes.
+        </p>
+        <p>
+          Figures 8 and 9 show the custom sensor PCB and the interface PCB that collected data and passed it forward to the HMI. In the final design, PCB placement also helped shield the electronics and keep the hose path sealed.
+        </p>
+      </article>
+
+      <div class="grid-2 build-gallery">
+        <figure class="viz">
+          <span class="figure-title">Sensor PCB</span>
+          <img src="DSC00461.JPG" alt="Custom sensor PCB designed to be mounted on the hose.">
+          <figcaption>
+            Figure 8. Custom sensor PCB designed to mount directly on the hose for capsule detection.
+          </figcaption>
+        </figure>
+        <figure class="viz">
+          <span class="figure-title">Interface PCB</span>
+          <img src="interfacepcb.jpg" alt="Interface PCB that collects data from the sensor PCBs and sends it to the HMI.">
+          <figcaption>
+            Figure 9. Interface PCB used to collect sensor data and send it to the HMI.
+          </figcaption>
+        </figure>
+      </div>
+
+      <article class="panel build-group-copy">
+        <span class="eyebrow">Component Group 3</span>
+        <h3>Human-machine interface</h3>
+        <p>
+          This group shows how the system output was presented to the operator. The HMI was designed both for demonstration and for a more integration-focused workflow.
+        </p>
+        <p>
+          Figures 10 and 11 show two interface directions: one used for demonstration and one intended for PLC-oriented integration so the system could connect more directly with plant controls.
+        </p>
+      </article>
+
+      <div class="grid-2 build-gallery">
+        <figure class="viz">
+          <span class="figure-title">HMI for PLC Integration</span>
+          <img src="hmi2.PNG" alt="HMI screen prepared for PLC integration.">
+          <figcaption>
+            Figure 10. HMI concept prepared for PLC-oriented integration.
+          </figcaption>
+        </figure>
+        <figure class="viz">
+          <span class="figure-title">HMI Demo</span>
+          <img src="hmi1.PNG" alt="HMI screen used for demonstration of the capsule tracking system.">
+          <figcaption>
+            Figure 11. Demonstration HMI used to show live system behavior.
+          </figcaption>
+        </figure>
+      </div>
+
+      <article class="panel build-group-copy build-video-block">
+        <span class="eyebrow">Final Artifact</span>
+        <h3>QIS Capsule Tracking System Capstone Video</h3>
+        <p>
+          This video is included as a final summary artifact for the project. It is separate from the build groups above and gives a concise overview of the system concept, prototype, and final direction.
+        </p>
+        <figure class="viz">
+          <span class="figure-title">Figure 12. Capstone Video</span>
+          <div class="video-shell">
+            <iframe
+              class="video-frame"
+              src="https://www.youtube.com/embed/qni2ZHnxNtM"
+              title="ARTMS QIS Capsule Tracking System capstone video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <figcaption>
+            Capstone video showing the project direction, sensing concept, and final system summary.
+          </figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section class="section" id="next">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Sensor Stack</span>
+          <h2>Why three sensing modes were stronger than one</h2>
+        </div>
+      </div>
+
+      <div class="sensor-strip">
+        <article class="sensor-card">
+          <header>
+            <h3>Inductive</h3>
+            <span class="tag teal">LDC1101 path</span>
+          </header>
+          <p>
+            A PCB coil changes resonant behavior when the aluminum capsule passes nearby. It works through the hose wall and suits a sealed system.
+          </p>
+        </article>
+        <article class="sensor-card">
+          <header>
+            <h3>Accelerometer</h3>
+            <span class="tag signal">BMA400 path</span>
+          </header>
+          <p>
+            Capsule motion creates vibrations in the hose and coupler. It was highly sensitive but required care around environmental noise.
+          </p>
+        </article>
+        <article class="sensor-card">
+          <header>
+            <h3>Time of flight</h3>
+            <span class="tag copper">VL53L0X path</span>
+          </header>
+          <p>
+            A transparent coupler allowed direct distance sensing. It offered a clear signal but required a more deliberate mechanical interface.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="testing">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Testing</span>
+          <h2>How we checked whether it actually worked</h2>
+        </div>
+      </div>
+
+      <article class="panel build-group-copy">
+          <h3>Sensor data plot</h3>
+          <p>
+            Figure 13 shows accelerometer and time-of-flight data collected during testing. The spikes align with capsule motion and indicate when the system sensed the capsule passing through the setup.
+          </p>
+          <div class="callout">
+            The key result was feasibility: the prototype produced detectable sensor responses and usable live feedback in controlled testing.
+          </div>
+      </article>
+
+      <figure class="viz testing-plot">
+          <span class="figure-title">Sensor Data Plot</span>
+          <img src="newplot-2.png" alt="Accelerometer and time-of-flight sensor data where spikes indicate sensing of the capsule.">
+          <figcaption>
+            Figure 13. Accelerometer and time-of-flight sensor data showing spikes when the capsule is sensed.
+          </figcaption>
+      </figure>
+
+      <article class="panel build-group-copy">
+        <span class="eyebrow">Limitations</span>
+        <h3>Testing limits</h3>
+        <p>
+          The main limitations came from prototype maturity and test conditions. We were unable to fully test the inductive sensor path, so that part of the system still needs additional validation.
+        </p>
+        <p>
+          We also had issues with the clarity of the 3D-printed coupling, which affected the optical path and limited time-of-flight performance. More broadly, the test setup still faced air leakage, limited cycle count, and no live validation in the full QIS infrastructure.
+        </p>
+        <div class="callout">
+          FMEA showed the highest-risk issues were coupler integrity and sensor reliability, so mechanical sealing and stable sensing remained the main design priorities.
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">What Comes Next</span>
+          <h2>Future improvements</h2>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <article class="project-card">
+          <h3>Production-ready electronics</h3>
+          <p>Refine the sensor PCB with a 3-4 layer stack-up, simpler connectors, and fewer prototype-only parts.</p>
+        </article>
+        <article class="project-card">
+          <h3>Stronger industrial integration</h3>
+          <p>Fabricate the interface PCB and replace USB testing links with plant-ready protocols such as MODBUS or PROFINET.</p>
+        </article>
+        <article class="project-card">
+          <h3>Sensor reliability</h3>
+          <p>Add startup tests, periodic calibration, and improved ToF packaging or coupler interfaces to improve detection reliability.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-shell">
+    <div class="footer-card">
+      <span><a href="index.html">About Me</a> · <a href="reflection.html">Reflection</a></span>
+    </div>
+  </footer>
+</body>
+</html>
